@@ -46,7 +46,6 @@ public class MovimientoJugador : MonoBehaviour
         {
             Quaternion rotacionObjetivo = Quaternion.LookRotation(direccion);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotacionObjetivo, velocidadRotacion * Time.deltaTime);
-
             controller.Move(direccion * velocidad * Time.deltaTime);
         }
 
